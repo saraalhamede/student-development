@@ -22,6 +22,12 @@
 
     Steps 3:
     creating the mockData.js file (the project Data) to helping us to know how the project going to be.
+    arrays we export 
+    - users
+    - courses
+    - materials
+    - assignments
+    - announcements
 
 
 
