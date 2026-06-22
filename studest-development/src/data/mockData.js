@@ -19,7 +19,8 @@ export const users =[
         bio:"Experienced educator with a strong background in curriculum development and student engagement. Skilled in creating interactive learning experiences and fostering a positive classroom environment. Committed to helping students achieve their academic goals.",
         notification:true,
     }
-]
+];
+
  export const courses = [{
     id: 1,
     title: "React Basics",
@@ -92,7 +93,8 @@ export const users =[
     level: "All levels",
     schedule: "Sat, 12:00",
   }
- ]
+ ];
+
   export const materials = [
     { id: 1,
     courseId: 1,
@@ -213,4 +215,118 @@ export const users =[
     size: "520 KB",
     duration: "15 min",
   },
-  ]
+  ];
+
+  export const assignments = [
+    {
+    id: 1,
+    courseId: 2,
+    title: "Algebra Practice Set",
+    description: "Complete equations 1-20 and show every step clearly.",
+    deadline: "June 24, 2026",
+    time: "11:59 PM",
+    status: "pending",
+    priority: "high",
+    points: 20,
+  },
+  {
+    id: 2,
+    courseId: 1,
+    title: "React Quiz",
+    description:"Short quiz covering JSX, props, state, events, and controlled inputs.",
+    deadline: "June 25, 2026",
+    time: "10:00 AM",
+    status: "pending",
+    priority: "medium",
+    points: 15,
+  },
+  {
+    id: 3,
+    courseId: 3,
+    title: "Physics Lab Report",
+    description:
+      "Submit a structured report for the motion and forces experiment.",
+    deadline: "June 27, 2026",
+    time: "11:59 PM",
+    status: "pending",
+    priority: "high",
+    points: 30,
+  },
+  {
+    id: 4,
+    courseId: 4,
+    title: "Opinion Essay Draft",
+    description:
+      "Write a 500-word draft with a clear thesis and supporting evidence.",
+    deadline: "June 29, 2026",
+    time: "6:00 PM",
+    status: "completed",
+    priority: "medium",
+    points: 25,
+  },
+  {
+    id: 5,
+    courseId: 5,
+    title: "Accessible Color Palette",
+    description:"Create and explain a five-color accessible interface palette.",
+    deadline: "July 1, 2026",
+    time: "8:00 PM",
+    status: "pending",
+    priority: "low",
+    points: 20,
+  },
+  {
+    id: 6,
+    courseId: 6,
+    title: "Personal Study Plan",
+    description: "Prepare a realistic two-week study schedule and reflection.",
+    deadline: "July 3, 2026",
+    time: "5:00 PM",
+    status: "completed",
+    priority: "low",
+    points: 10,
+  },
+  ];
+
+  export const announcements = [
+    {
+    id: 1,
+    courseId: 3,
+    title: "New Lab Material",
+    message:"The motion and forces summary is now available before Thursday's practical lesson.",
+    date: "2 hours ago",
+    category: "material",
+  },
+  {
+    id: 2,
+    courseId: 2,
+    title: "Assignment Reminder",
+    message:"The algebra practice set is due Tuesday. Office hours are available Monday afternoon.",
+    date: "1 day ago",
+    category: "assignment",
+  },
+  {
+    id: 3,
+    courseId: 4,
+    title: "Class Schedule Update",
+    message: "Friday's English lesson will begin at 15:30 instead of 15:00.",
+    date: "2 days ago",
+    category: "schedule",
+  },
+  {
+    id: 4,
+    courseId: 1,
+    title: "React Workshop",
+    message:"Bring your laptop to the state and events workshop. Starter files are already uploaded.",
+    date: "3 days ago",
+    category: "event",
+  },
+  {
+    id: 5,
+    courseId: 6,
+    title: "Study Skills Check-in",
+    message:"Please bring your completed weekly planner to the next mentoring session.",
+    date: "4 days ago",
+    category: "general",
+  },
+  ];
