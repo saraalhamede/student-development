@@ -29,7 +29,17 @@
     - assignments
     - announcements
 
-    
+    steps 4: componemts building 
+    - `SearchBar.jsx`
+    - `CourseCard.jsx`
+    - `MaterialCard.jsx`
+    - `AssignmentCard.jsx`
+    - `AnnouncementCard.jsx`
+    - `ProtectedRoute.jsx`
+    - `Sidebar.jsx`
+    - `Header.jsx`
+
+
 
 
 
