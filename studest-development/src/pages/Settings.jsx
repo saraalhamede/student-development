@@ -3,9 +3,7 @@ import { useEffect, useState } from "react";
 export default function Settings({ user, updateProfile }) {
   const [editing, setEditing] = useState(false);
   const [saved, setSaved] = useState(false);
-  const [form, setForm] = useState(user);
-
-  useEffect(() => setForm(user), [user]);
+  const [form, setForm] = useState(() => user);
 
   function updateField(event) {
     const { name, value, checked, type } = event.target;

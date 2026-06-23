@@ -1,10 +1,10 @@
-import Announcement from "../component/AnnouncementCard.jsx.";
+import AnnouncementCard from "../component/AnnouncementCard.jsx";
 import AssignmentCard from "../component/AssignmentCard.jsx";
 import CourseCard from "../component/CourseCard.jsx";
 import MaterialCard from "../component/MaterialCard.jsx";
 import SearchBar from "../component/SearchBar.jsx";
 
-export default function StudentDashboard({ user, courses, materials, assignments, search, setSearch }) {
+export default function StudentDashboard({ user, courses, materials, assignments, announcements, search, setSearch }) {
     const query = search.trim().toLowerCase();
     const shownCourses = courses.filter((course) => !query || `${course.title} ${course.teacher} ${course.category}`.toLowerCase().includes(query));
     const shownMaterials = materials.filter((material) => !query || `${material.title} ${material.description} ${material.author}`.toLowerCase().includes(query));

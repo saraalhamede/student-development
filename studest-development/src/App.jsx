@@ -1,8 +1,8 @@
 import { Navigate, NavLink, Route, Routes, useNavigate } from "react-router-dom";
 import { useEffect, useMemo, useState } from "react";
-import Sidebar from "./components/Sidebar.jsx";
-import Header from "./components/Header.jsx";
-import ProtectedRoute from "./components/ProtectedRoute.jsx";
+import Sidebar from "./component/Sidebar.jsx";
+import Header from "./component/Header.jsx";
+import ProtectedRoute from "./component/ProtectedRoute.jsx";
 import Login from "./pages/Login.jsx";
 import Register from "./pages/Register.jsx";
 import StudentDashboard from "./pages/StudentDashboard.jsx";

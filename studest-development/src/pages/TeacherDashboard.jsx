@@ -1,5 +1,5 @@
 import {useState} from "react";
-import Announcement from "../component/Announcement.jsx";
+import AnnouncementCard from "../component/AnnouncementCard.jsx";
 import CourseCard from "../component/CourseCard.jsx";
 import MaterialCard from "../component/MaterialCard.jsx";
 const emptyCourse ={title: "", desciption: "", category:" Develoment", level: "Beginner", schedule:"" };

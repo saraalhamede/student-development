@@ -1,5 +1,5 @@
-import {Link, useNavigate, NavLink} from "react-router-dom";
-export default function Register({onRegister}){
+import {Link, useNavigate} from "react-router-dom";
+export default function Register({onLogin}){
     const navigate = useNavigate();
     function handleSubmit(event){
         event.preventDefault();
