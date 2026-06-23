@@ -55,7 +55,7 @@ student-development/
     ```bash
     npm run lint
     npm run build
-    npm run preview
+    npm run dev
     ```
     
 # Steps
