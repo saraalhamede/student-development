@@ -39,6 +39,40 @@
     - `Sidebar.jsx`
     - `Header.jsx`
 
+## Component Responsibilities
+
+    - Sidebar.jsx
+
+        Displays navigation links and the logout button.
+
+    - Header.jsx
+
+        Displays the top search field and current user information.
+
+    - SearchBar.jsx
+
+        A controlled input that receives `value` and `onChange` props.
+
+    - CourseCard.jsx
+
+        Displays course title, teacher, description, material count, and progress. Clicking it opens the course details route.
+
+    - MaterialCard.jsx
+
+        Displays material type, title, course, date, and an Open button.
+
+    - AssignmentCard.jsx
+
+        Displays the deadline, title, course, and time.
+
+    - AnnouncementCard.jsx
+
+        Displays an announcement title, message, and relative date.
+
+    - ProtectedRoute.jsx
+
+        Prevents logged-out users from opening dashboard pages.
+
     
 
 
