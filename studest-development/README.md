@@ -119,6 +119,21 @@
         ```
         It then finds the matching course and filters materials, assignments, and announcements by `courseId`.
 
+    Step 9: Connect Everything In App.jsx
+
+        After components and pages exist, connect them in `App.jsx`.
+
+        Important responsibilities:
+        1. Read saved values from `localStorage`.
+        2. Create React state for the user, courses, materials, and search.
+        3. Save courses and materials when state changes.
+        4. Create login and logout functions.
+        5. Create add-course and add-material functions.
+        6. Create the shared dashboard layout.
+        7. Add all React Router routes.
+        8. Protect private pages with `ProtectedRoute`.
+        9. Redirect users to the correct dashboard based on role.
+
 
 
             
