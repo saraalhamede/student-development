@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import MaterialCard from "../components/MaterialCard.jsx";
-import SearchBar from "../components/SearchBar.jsx";
+import MaterialCard from "../component/MaterialCard.jsx";
+import SearchBar from "../component/SearchBar.jsx";
 
 const REVIEWED_KEY = "student-development-reviewed-materials";
 

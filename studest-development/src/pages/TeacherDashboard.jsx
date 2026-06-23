@@ -2,7 +2,7 @@ import {useState} from "react";
 import AnnouncementCard from "../component/AnnouncementCard.jsx";
 import CourseCard from "../component/CourseCard.jsx";
 import MaterialCard from "../component/MaterialCard.jsx";
-const emptyCourse ={title: "", desciption: "", category:" Develoment", level: "Beginner", schedule:"" };
+const emptyCourse ={title: "", description: "", category:"Development", level: "Beginner", schedule:"" };
 const emptyMaterial ={title: "",type:"pdf",courseId:"" , description: "",   content:""};
 const emptyAnnouncement ={courseId:"",title: "", message: ""};
 export default function TeacherDashboard({ user, courses, materials, announcements, addCourse, addMaterial, addAnnouncement }) {

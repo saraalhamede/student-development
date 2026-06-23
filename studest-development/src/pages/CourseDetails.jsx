@@ -1,7 +1,7 @@
 import { Link, useParams } from "react-router-dom";
-import AssignmentCard from "../components/AssignmentCard.jsx";
-import MaterialCard from "../components/MaterialCard.jsx";
-import AnnouncementCard from "../components/AnnouncementCard.jsx";
+import AssignmentCard from "../component/AssignmentCard.jsx";
+import MaterialCard from "../component/MaterialCard.jsx";
+import AnnouncementCard from "../component/AnnouncementCard.jsx";
 
 export default function CourseDetails({ courses, materials, assignments, announcements, toggleAssignment }) {
   const { id } = useParams();

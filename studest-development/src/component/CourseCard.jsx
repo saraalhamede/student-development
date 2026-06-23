@@ -8,8 +8,8 @@ const styles ={
     amber:"from-amber-50 to-amber-100 text-amber-700 bg-amber-500",
 }
 export default function CourseCard({ course }) {
-   const styleString = styles[course.color] || styles.indigo;
-   const [fromClass, toClass, textClass, barClass] = styleString.split(" ");
+    const [fromClass, toClass, textClass, barClass] = (styles[course.color] || styles.indigo).split(" ");
+   
 
 return (
     <Link to={`/courses/${course.id}`} className="card group block overflow-hidden transition hover:-translate-y-1 hover:border-indigo-200 hover:shadow-xl active:scale-[0.99]">

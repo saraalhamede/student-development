@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import AssignmentCard from "../components/AssignmentCard.jsx";
+import AssignmentCard from "../component/AssignmentCard.jsx";
 
 export default function Assignments({ courses, assignments, search, toggleAssignment }) {
   const [params] = useSearchParams();

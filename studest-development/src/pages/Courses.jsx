@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import CourseCard from "../components/CourseCard.jsx";
+import CourseCard from "../component/CourseCard.jsx";
 
 export default function Courses({ courses, search }) {
   const [category, setCategory] = useState("All");

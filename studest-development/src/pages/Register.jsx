@@ -7,7 +7,7 @@ export default function Register({onLogin}){
         const email = formData.get("email").trim();
         const name = formData.get("name").trim();
         const role = formData.get("role");
-        const user = onLogin({ email,name, role });
+        const user = onLogin({ email, name, role });
         navigate(user.role === "teacher" ? "/teacher" : "/student");
     }
    
