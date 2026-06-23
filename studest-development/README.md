@@ -133,6 +133,10 @@
         7. Add all React Router routes.
         8. Protect private pages with `ProtectedRoute`.
         9. Redirect users to the correct dashboard based on role.
+    
+    Step 10: Render App From main.jsx
+
+        Finally, import `App.jsx` into `main.jsx` and wrap it with `BrowserRouter`.
 
 
 
