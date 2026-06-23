@@ -103,6 +103,22 @@
         - Course list
         - Recent uploads
 
+    Step 8: Create The Remaining Pages
+
+        Create these pages next:
+        - `Courses.jsx`
+        - `CourseDetails.jsx`
+        - `Materials.jsx`
+        - `Assignments.jsx`
+        - `Settings.jsx`
+
+        `CourseDetails.jsx` reads the route parameter using `useParams()`:
+
+        ```jsx
+        const { id } = useParams();
+        ```
+        It then finds the matching course and filters materials, assignments, and announcements by `courseId`.
+
 
 
             
