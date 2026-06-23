@@ -8,6 +8,56 @@
  - Local mock data
  - `localStorage` for fake login and teacher-created content
 
+# Project Structure
+
+student-development/
+  src/
+    components/
+      Sidebar.jsx
+      Header.jsx
+      CourseCard.jsx
+      MaterialCard.jsx
+      AssignmentCard.jsx
+      AnnouncementCard.jsx
+      SearchBar.jsx
+      ProtectedRoute.jsx
+
+    pages/
+      Login.jsx
+      Register.jsx
+      StudentDashboard.jsx
+      TeacherDashboard.jsx
+      Courses.jsx
+      CourseDetails.jsx
+      Materials.jsx
+      Assignments.jsx
+      Settings.jsx
+
+    data/
+      mockData.js
+
+    App.jsx
+    main.jsx
+    index.css
+
+  index.html
+  package.json
+  tailwind.config.js
+  postcss.config.js
+  vite.config.js
+  eslint.config.js
+  README.md
+
+# Run The Project
+
+    Open a terminal inside the project folder:
+
+    ```bash
+    npm run lint
+    npm run build
+    npm run preview
+    ```
+    
 # Steps
     Step 1: 
     creating The Vite Project by bash: 
