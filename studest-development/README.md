@@ -83,7 +83,28 @@
     step 5: Creating the authentication pages
         - Login page
         - Register page
-        
+
+    step 6: Create StudentDashboard.jsx
+    
+        The student dashboard receives its data from `App.jsx` and displays:
+        - Welcome message
+        - Search bar
+        - Course cards
+        - Recent materials
+        - Announcements
+        - Upcoming assignments
+    
+    Step 7: Create TeacherDashboard.jsx
+
+        The teacher dashboard displays:
+        - Welcome message
+        - Add Course form
+        - Upload Material form
+        - Course list
+        - Recent uploads
+
+
+
             
 
     
