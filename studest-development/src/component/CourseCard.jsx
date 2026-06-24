@@ -20,10 +20,10 @@ return (
         </div>
       </div>
       <div className="p-5">
-        <h3 className="text-lg font-black text-slate-950 group-hover:text-indigo-700">{course.title}</h3>
+        <h3 className="break-words text-lg font-black text-slate-950 group-hover:text-indigo-700">{course.title}</h3>
         <p className="mt-1 text-sm text-slate-500">{course.teacher}</p>
         <p className="mt-3 line-clamp-2 text-sm leading-6 text-slate-600">{course.description}</p>
-        <div className="mt-4 flex items-center justify-between text-sm">
+        <div className="mt-4 flex flex-wrap items-center justify-between gap-2 text-sm">
           <span className="rounded-full bg-indigo-50 px-3 py-1 font-bold text-indigo-700">{course.materialsCount} materials</span>
           <span className="font-black text-slate-700">{course.progress}%</span>
         </div>

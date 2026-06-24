@@ -12,17 +12,17 @@ export default function Header({ user, search, setSearch, courses, materials, as
     : [];
 
   return (
-    <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/95 px-4 py-4 backdrop-blur lg:px-8">
-      <div className="flex items-center gap-4">
-        <div className="relative w-full max-w-2xl">
+    <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/95 px-4 py-3 backdrop-blur sm:px-6 lg:px-8 lg:py-4">
+      <div className="flex min-w-0 items-center gap-3 lg:gap-4">
+        <div className="relative min-w-0 flex-1 lg:max-w-2xl">
           <SearchBar value={search} onChange={setSearch} />
           {query && (
             <div className="absolute left-0 right-0 top-[calc(100%+8px)] z-40 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl">
               {results.length ? (
                 results.map((result) => (
-                  <Link key={result.id} to={result.to} onClick={() => setSearch("")} className="flex items-center justify-between gap-4 border-b border-slate-100 px-4 py-3 transition last:border-0 hover:bg-indigo-50">
-                    <span className="font-bold text-slate-900">{result.label}</span>
-                    <span className="text-xs font-semibold text-slate-400">{result.meta}</span>
+                  <Link key={result.id} to={result.to} onClick={() => setSearch("")} className="flex min-w-0 flex-col gap-1 border-b border-slate-100 px-4 py-3 transition last:border-0 hover:bg-indigo-50 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+                    <span className="min-w-0 break-words font-bold text-slate-900">{result.label}</span>
+                    <span className="shrink-0 text-xs font-semibold text-slate-400">{result.meta}</span>
                   </Link>
                 ))
               ) : (

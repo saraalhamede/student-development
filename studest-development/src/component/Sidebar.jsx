@@ -4,9 +4,9 @@ export default function Sidebar({user, onLogout}){
     const links =[
         { label: "Dashboard", path: dashboardPath, icon: "D" },
         { label: "Courses", path: "/courses", icon: "C" },
-        { label: "Material", path: "/material", icon: "M" },
+        { label: "Materials", path: "/materials", icon: "M" },
         { label: "Assignments", path: "/assignments", icon: "A" },
-        { label: "Profile", path: "/profile", icon: "P" },
+        { label: "Profile", path: "/settings", icon: "P" },
     ];
     return (
     <aside className="hidden w-72 shrink-0 border-r border-slate-200 bg-white px-5 py-6 lg:sticky lg:top-0 lg:flex lg:h-screen lg:flex-col lg:overflow-y-auto">

@@ -44,9 +44,9 @@ export default function TeacherDashboard({ user, courses, materials, announcemen
 
   return (
     <div className="space-y-6">
-      <section className="rounded-3xl border border-indigo-100 bg-white p-6 shadow-soft">
+      <section className="rounded-3xl border border-indigo-100 bg-white p-4 shadow-soft sm:p-6">
         <p className="text-sm font-bold uppercase tracking-[0.16em] text-indigo-600">Teacher dashboard</p>
-        <h1 className="mt-3 text-3xl font-black text-slate-950 md:text-4xl">Welcome, {user.name}</h1>
+        <h1 className="mt-3 break-words text-2xl font-black text-slate-950 sm:text-3xl md:text-4xl">Welcome, {user.name}</h1>
         <p className="mt-3 max-w-2xl text-slate-600">Create courses, publish detailed learning resources, and keep students updated.</p>
       </section>
 
@@ -58,29 +58,29 @@ export default function TeacherDashboard({ user, courses, materials, announcemen
         <div className="card p-5"><p className="text-sm font-bold text-slate-500">Announcements</p><p className="mt-2 text-3xl font-black text-violet-600">{announcements.length}</p></div>
       </div>
 
-      <div className="grid gap-6 xl:grid-cols-[1fr_380px]">
-        <div className="space-y-6">
-          <section className="card p-5">
+      <div className="grid min-w-0 gap-6 xl:grid-cols-[minmax(0,1fr)_380px]">
+        <div className="min-w-0 space-y-6">
+          <section className="card p-4 sm:p-5">
             <h2 className="mb-5 text-xl font-black text-slate-950">Course Management</h2>
-            <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">{courses.slice(0, 6).map((course) => <CourseCard key={course.id} course={course} />)}</div>
+            <div className="grid gap-5 sm:grid-cols-2 2xl:grid-cols-3">{courses.slice(0, 6).map((course) => <CourseCard key={course.id} course={course} />)}</div>
           </section>
-          <section className="card px-5">
+          <section className="card px-4 sm:px-5">
             <h2 className="border-b border-slate-100 py-4 text-xl font-black text-slate-950">Recent Uploads</h2>
             {materials.slice(0, 6).map((material) => <MaterialCard key={material.id} material={material} course={courses.find((course) => course.id === Number(material.courseId))} />)}
           </section>
-          <section className="card p-5">
+          <section className="card p-4 sm:p-5">
             <h2 className="text-xl font-black text-slate-950">Latest Announcements</h2>
             <div className="mt-3">{announcements.slice(0, 4).map((announcement) => <AnnouncementCard key={announcement.id} announcement={announcement} />)}</div>
           </section>
         </div>
 
         <aside className="space-y-6">
-          <form onSubmit={submitCourse} className="card p-5">
+          <form onSubmit={submitCourse} className="card p-4 sm:p-5">
             <h2 className="text-xl font-black text-slate-950">Add New Course</h2>
             <div className="mt-4 space-y-4">
               <input required className="input" placeholder="Course title" value={courseForm.title} onChange={(event) => setCourseForm({ ...courseForm, title: event.target.value })} />
               <textarea required className="input min-h-24 resize-none" placeholder="Course description" value={courseForm.description} onChange={(event) => setCourseForm({ ...courseForm, description: event.target.value })} />
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid gap-3 sm:grid-cols-2">
                 <select className="input" value={courseForm.category} onChange={(event) => setCourseForm({ ...courseForm, category: event.target.value })}><option>Development</option><option>Science</option><option>Languages</option><option>Design</option><option>Skills</option></select>
                 <select className="input" value={courseForm.level} onChange={(event) => setCourseForm({ ...courseForm, level: event.target.value })}><option>Beginner</option><option>Intermediate</option><option>Advanced</option><option>All levels</option></select>
               </div>
@@ -89,7 +89,7 @@ export default function TeacherDashboard({ user, courses, materials, announcemen
             </div>
           </form>
 
-          <form onSubmit={submitMaterial} className="card p-5">
+          <form onSubmit={submitMaterial} className="card p-4 sm:p-5">
             <h2 className="text-xl font-black text-slate-950">Upload Material</h2>
             <div className="mt-4 space-y-4">
               <select required className="input" value={materialForm.courseId} onChange={(event) => setMaterialForm({ ...materialForm, courseId: event.target.value })}><option value="">Choose course</option>{courses.map((course) => <option key={course.id} value={course.id}>{course.title}</option>)}</select>
@@ -101,7 +101,7 @@ export default function TeacherDashboard({ user, courses, materials, announcemen
             </div>
           </form>
 
-          <form onSubmit={submitAnnouncement} className="card p-5">
+          <form onSubmit={submitAnnouncement} className="card p-4 sm:p-5">
             <h2 className="text-xl font-black text-slate-950">Post Announcement</h2>
             <div className="mt-4 space-y-4">
               <select required className="input" value={announcementForm.courseId} onChange={(event) => setAnnouncementForm({ ...announcementForm, courseId: event.target.value })}><option value="">Choose course</option>{courses.map((course) => <option key={course.id} value={course.id}>{course.title}</option>)}</select>

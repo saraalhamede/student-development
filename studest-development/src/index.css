@@ -3,20 +3,29 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    overflow-x: hidden;
+  }
+
   body {
     min-height: 100vh;
+    overflow-x: hidden;
     background: #f8fbff;
     color: #08102f;
+  }
+
+  #root {
+    min-width: 0;
   }
 }
 
 @layer components {
   .card {
-    @apply rounded-2xl border border-slate-200 bg-white shadow-soft;
+    @apply min-w-0 rounded-2xl border border-slate-200 bg-white shadow-soft;
   }
 
   .input {
-    @apply w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-indigo-400 focus:ring-4 focus:ring-indigo-100;
+    @apply w-full min-w-0 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition focus:border-indigo-400 focus:ring-4 focus:ring-indigo-100;
   }
 
   .btn-primary {

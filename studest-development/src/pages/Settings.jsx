@@ -29,7 +29,7 @@ export default function Settings({ user, updateProfile }) {
       <section className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
         <div>
           <p className="text-sm font-bold uppercase tracking-[0.16em] text-indigo-600">Profile</p>
-          <h1 className="mt-2 text-3xl font-black text-slate-950">Account Settings</h1>
+          <h1 className="mt-2 text-2xl font-black text-slate-950 sm:text-3xl">Account Settings</h1>
           <p className="mt-2 text-slate-500">Update your information and save it locally.</p>
         </div>
         {!editing && <button type="button" onClick={() => setEditing(true)} className="btn-primary">Edit profile</button>}
@@ -37,11 +37,11 @@ export default function Settings({ user, updateProfile }) {
 
       {saved && <div className="rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm font-black text-emerald-700">Profile saved successfully.</div>}
 
-      <form onSubmit={handleSave} className="grid gap-6 lg:grid-cols-[320px_1fr]">
-        <section className="card p-6">
+      <form onSubmit={handleSave} className="grid min-w-0 gap-6 lg:grid-cols-[320px_minmax(0,1fr)]">
+        <section className="card p-4 sm:p-6">
           <div className="flex h-20 w-20 items-center justify-center rounded-3xl bg-indigo-100 text-2xl font-black text-indigo-700">{form.name.slice(0, 2).toUpperCase()}</div>
-          <h2 className="mt-4 text-2xl font-black text-slate-950">{form.name}</h2>
-          <p className="mt-1 text-sm text-slate-500">{form.email}</p>
+          <h2 className="mt-4 break-words text-2xl font-black text-slate-950">{form.name}</h2>
+          <p className="mt-1 break-words text-sm text-slate-500">{form.email}</p>
           <p className="mt-4 inline-flex rounded-full bg-indigo-50 px-3 py-1 text-sm font-black capitalize text-indigo-700">{form.role}</p>
           <div className="mt-6 border-t border-slate-100 pt-5 text-sm text-slate-500">
             <p>{form.location || "Location not added"}</p>
@@ -49,7 +49,7 @@ export default function Settings({ user, updateProfile }) {
           </div>
         </section>
 
-        <section className="card p-6">
+        <section className="card p-4 sm:p-6">
           <h2 className="text-xl font-black text-slate-950">Personal information</h2>
           <div className="mt-5 grid gap-4 md:grid-cols-2">
             <label className="text-sm font-bold text-slate-700">Full name<input name="name" value={form.name} onChange={updateField} disabled={!editing} className="input mt-2 disabled:bg-slate-50 disabled:text-slate-500" /></label>
@@ -59,7 +59,7 @@ export default function Settings({ user, updateProfile }) {
             <label className="text-sm font-bold text-slate-700 md:col-span-2">Bio<textarea name="bio" value={form.bio || ""} onChange={updateField} disabled={!editing} className="input mt-2 min-h-28 resize-none disabled:bg-slate-50 disabled:text-slate-500" /></label>
           </div>
 
-          <label className="mt-5 flex items-center justify-between gap-4 rounded-2xl bg-slate-50 p-4">
+          <label className="mt-5 flex flex-col gap-4 rounded-2xl bg-slate-50 p-4 sm:flex-row sm:items-center sm:justify-between">
             <span><span className="block font-black text-slate-900">Notifications</span><span className="mt-1 block text-sm text-slate-500">Receive reminders for materials and assignments.</span></span>
             <input name="notifications" type="checkbox" checked={Boolean(form.notifications)} onChange={updateField} disabled={!editing} className="h-5 w-5 accent-indigo-600" />
           </label>

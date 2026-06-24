@@ -24,7 +24,7 @@ export default function Assignments({ courses, assignments, search, toggleAssign
     <div className="space-y-6">
       <section>
         <p className="text-sm font-bold uppercase tracking-[0.16em] text-indigo-600">Assignments</p>
-        <h1 className="mt-2 text-3xl font-black text-slate-950">Upcoming Assignments</h1>
+        <h1 className="mt-2 text-2xl font-black text-slate-950 sm:text-3xl">Upcoming Assignments</h1>
         <p className="mt-2 text-slate-500">Review requirements, track deadlines, and update completion status.</p>
       </section>
 

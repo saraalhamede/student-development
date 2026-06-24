@@ -18,12 +18,12 @@ export default function Courses({ courses, search }) {
     <div className="space-y-6">
       <section>
         <p className="text-sm font-bold uppercase tracking-[0.16em] text-indigo-600">Courses</p>
-        <h1 className="mt-2 text-3xl font-black text-slate-950">Explore Courses</h1>
+        <h1 className="mt-2 text-2xl font-black text-slate-950 sm:text-3xl">Explore Courses</h1>
         <p className="mt-2 text-slate-500">Browse active learning paths and open a connected course workspace.</p>
       </section>
 
       <div className="flex flex-wrap gap-2">
-        {categories.map((item) => <button key={item} type="button" onClick={() => setCategory(item)} className={`rounded-xl px-4 py-2 text-sm font-black transition ${category === item ? "bg-indigo-600 text-white shadow-lg shadow-indigo-200" : "bg-white text-slate-600 hover:bg-indigo-50 hover:text-indigo-700"}`}>{item}</button>)}
+        {categories.map((item) => <button key={item} type="button" onClick={() => setCategory(item)} className={`min-w-0 rounded-xl px-4 py-2 text-sm font-black transition ${category === item ? "bg-indigo-600 text-white shadow-lg shadow-indigo-200" : "bg-white text-slate-600 hover:bg-indigo-50 hover:text-indigo-700"}`}>{item}</button>)}
       </div>
 
       <div className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">{filteredCourses.map((course) => <CourseCard key={course.id} course={course} />)}</div>

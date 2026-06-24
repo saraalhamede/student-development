@@ -57,7 +57,7 @@ function Layout({ user, search, setSearch, courses, materials, assignments, onLo
       <Sidebar user={user} onLogout={onLogout} />
       <div className="min-w-0 flex-1">
         <Header user={user} search={search} setSearch={setSearch} courses={courses} materials={materials} assignments={assignments} onLogout={onLogout} />
-        <main className="px-4 py-6 pb-24 lg:px-8 lg:pb-8">{children}</main>
+        <main className="min-w-0 px-4 py-5 pb-24 sm:px-6 lg:px-8 lg:py-6 lg:pb-8">{children}</main>
         <nav className="fixed inset-x-0 bottom-0 z-30 grid grid-cols-5 border-t border-slate-200 bg-white px-2 py-2 shadow-2xl lg:hidden">
           {links.map((link) => (
             <NavLink
